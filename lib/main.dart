@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:settings_screen/screens/settings_screen.dart';
 
-void main() {
+
+Future main() async{
   runApp(const MyApp());
   SystemChrome.setEnabledSystemUIMode(
-    SystemUiMode.leanBack,
+    SystemUiMode.manual,
+    overlays: [SystemUiOverlay.top],
   );
 }
 

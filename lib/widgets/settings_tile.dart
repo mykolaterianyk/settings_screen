@@ -6,6 +6,7 @@ class SettingsTile extends StatelessWidget {
   final IconData icon;
   final Color iconColor;
   final String title;
+
   const SettingsTile({
     Key? key,
     required this.color,
