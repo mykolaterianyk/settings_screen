@@ -16,7 +16,7 @@ class SettingsTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return      Row(
+    return Row(
       children: [
         Container(
           width: 50,
