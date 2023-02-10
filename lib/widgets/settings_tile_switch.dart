@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 
+
 class SettingsTile extends StatelessWidget {
   final Color color;
   final IconData icon;
@@ -27,7 +28,7 @@ class SettingsTile extends StatelessWidget {
             color: color,
           ),
           child: Icon(
-           icon,
+            icon,
             color: iconColor,),
         ),
         const SizedBox(width: 10),
@@ -43,7 +44,12 @@ class SettingsTile extends StatelessWidget {
         const SizedBox(
           width: 50,
           height: 50,
-          child: Icon(Ionicons.chevron_forward_outline),
+          child: Switch(
+            value: false,
+            onChanged:(bool state){
+              print(state);
+            },
+          ),
         )
       ],
     );
