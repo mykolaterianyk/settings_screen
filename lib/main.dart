@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:settings_screen/screens/settings_screen.dart';
-
+import 'package:settings_screen/provider/theme_provider.dart';
 
 Future main() async{
   runApp(const MyApp());
@@ -17,10 +17,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Settings",
-      home: SettingsScreen(),
+      themeMode: ThemeMode.system,
+      theme: MyThemes.lightTheme,
+      darkTheme: MyThemes.darkTheme,
+      home: const SettingsScreen(),
     );
   }
 }
